@@ -1,22 +1,15 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 import theme from '../theme';
 import '../fonts.css';
 import { Typography, Box } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import BorderedCard from '../components/BorderedCard';
 
 function FindOutMore() {
-    const navigate = useNavigate();
-
-    const handleReturnHome = () => {
-        navigate('/');
-    };
     return (
         <ThemeProvider theme={theme}>
 
-            <h2 style={{ textAlign: 'center' }} >FAQs</h2>
+            <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>FAQs</Typography>
             <BorderedCard>
                 <Box>
                     <Typography variant="h5" gutterBottom>

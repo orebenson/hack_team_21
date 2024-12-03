@@ -33,7 +33,7 @@ const PointsStatement = () => {
     return (
         <ThemeProvider theme={theme}>
             <div>
-                <h2 style={{ textAlign: 'center' }} >Points Statement</h2>
+                <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>Points Statement</Typography>
 
                 {pointsEarned.map((entry, index) => {
                     const month = entry.month;

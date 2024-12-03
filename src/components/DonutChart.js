@@ -2,6 +2,7 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { useTheme } from '@emotion/react';
+import { Typography } from '@mui/material';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -43,9 +44,9 @@ const DonutChart = ({ percentage, saved, target, month }) => {
         maxWidth: '80%', // Ensure the text doesn't overflow
         wordWrap: 'break-word',
       }}>
-        {percentage === 100 && <div>Congrats!</div>}
-        <div>{`You've saved £${saved}/£${target}`}</div>
-        <div>in {month}</div>
+        {percentage === 100 && <Typography style={{ fontWeight: 'bold' }}>Congrats!</Typography>}
+        <Typography style={{ fontWeight: 'bold' }}>{`You've saved £${saved}/£${target}`}</Typography>
+        <Typography style={{ fontWeight: 'bold' }}>in {month}</Typography>
       </div>
     </div>
   );
