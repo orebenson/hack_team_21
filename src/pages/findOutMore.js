@@ -57,11 +57,6 @@ function FindOutMore() {
                     </Typography>
                 </Box>
             </BorderedCard>
-            <Box my={4} display="flex">
-                <Button variant="contained" color="primary" onClick={handleReturnHome}>
-                    Return Home
-                </Button>
-            </Box>
         </ThemeProvider>
     );
 }
