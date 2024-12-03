@@ -1,6 +1,5 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 import theme from '../theme';
 import '../fonts.css';
 import { Typography, Box } from '@mui/material';
@@ -9,10 +8,6 @@ import BorderedCard from '../components/BorderedCard';
 
 function FindOutMore() {
     const navigate = useNavigate();
-
-    const handleReturnHome = () => {
-        navigate('/');
-    };
     return (
         <ThemeProvider theme={theme}>
 
