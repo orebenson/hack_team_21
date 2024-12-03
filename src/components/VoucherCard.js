@@ -1,8 +1,15 @@
 import React from 'react';
 import { Box, Typography, Button, Grid} from '@mui/material';
 import BorderedCard from './BorderedCard';
+import { useNavigate } from 'react-router-dom';
 
 const VoucherCard = ({ logo, logoHeight, voucherValue, points }) => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleClaimClick = () => {
+    navigate('/available-rewards/reward'); // Navigate to the desired route
+  };
+
   return (
     <BorderedCard>
       <Grid container spacing={2} alignItems="center">
@@ -15,7 +22,7 @@ const VoucherCard = ({ logo, logoHeight, voucherValue, points }) => {
             </Typography>
         </Grid>
         <Grid item xs={4}>
-            <Button variant="contained" color="primary" fullWidth>
+            <Button variant="contained" color="primary" onClick={handleClaimClick} fullWidth>
             <Box style={{ display: 'flex', flexDirection: 'column' }}>
                 <Typography variant="body1" style={{ fontSize: '12px', fontWeight: 'bold' }}>
                 Claim
