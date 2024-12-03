@@ -18,7 +18,7 @@ const SignUpButton = () => {
           mt: 4,
         }}
       >
-        <Button variant ="contained" size="large" color="primary" sx={{ mx: 'auto', width: 350, height: 60, p:1 }}>
+        <Button variant ="contained" size="large" color="primary" sx={{ mx: 'auto', width: 320, height: 60, p:1 }}>
           <Typography variant="body1" component="div">
               Sign up now 
           </Typography>

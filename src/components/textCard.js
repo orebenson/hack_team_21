@@ -9,7 +9,7 @@ const TextCard = ({ heading, body }) => {
     return (
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1, textAlign: 'center', borderRadius: 4, backgroundColor: theme.palette.secondary.main, mx: 'auto', p:1, maxWidth: 300, mt: 2,}}>
-        <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', fontSize: 16}}>
           {heading}
         </Typography>
         <ul style={{ listStyleType: 'disc', textAlign: 'left', paddingLeft: '20px' }}>
