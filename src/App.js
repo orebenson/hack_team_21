@@ -22,9 +22,11 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/available-rewards" element={<AvailableRewards />} />
               <Route path="/find-out-more" element={<FindOutMore />} />
-              {/* <Route path="/previous-rewards" element={<PreviousRewards />} />
-            <Route path="/available-rewards/reward" element={<RewardInformation />} />
-            <Route path="/available-rewards/reward/barcode" element={<Barcode />} /> */}
+              {/* 
+              <Route path="/previous-rewards" element={<PreviousRewards />} />
+              <Route path="/available-rewards/reward" element={<RewardInformation />} />
+              <Route path="/available-rewards/reward/barcode" element={<Barcode />} /> 
+              */}
               <Route path="/points-statement" element={<PointsStatement />} />
 
             </Routes>
