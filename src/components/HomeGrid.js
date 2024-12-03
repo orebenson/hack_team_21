@@ -15,8 +15,8 @@ const cardData = [
 
 const HomeGrid = () => {
   return (
-    <Box 
-      display="grid" 
+    <Box
+      display="grid"
       gridTemplateColumns="repeat(2, 1fr)" // 2 columns (always 2 columns)
       gap={2}  // Spacing between cards
       sx={{
@@ -37,31 +37,15 @@ const HomeGrid = () => {
             boxSizing: 'border-box',
             boxShadow: 2, // Add a subtle shadow to the card
           }}
-    >
-      <IconCard 
-        icon={coinsIcon} 
-        info="Find available rewards to claim" 
-        action="View Rewards" 
-        actionHref="/available-rewards"
-      />
-      <IconCard 
-        icon={pieChartIcon} 
-        info="Check your claimed reward history" 
-        action="Claimed Rewards" 
-        actionHref="/previous-rewards"
-      />
-      <IconCard 
-        icon={progressIcon} 
-        info="View your accumulated points" 
-        action="Points Statement" 
-        actionHref="/points-statement"
-      />
-      <IconCard 
-        icon={telescopeIcon} 
-        info="" 
-        action="Find Out More" 
-        actionHref="/find-out-more"
-      />
+        >
+          <IconCard
+            icon={card.icon}
+            info={card.info}
+            action={card.action}
+            actionHref={card.actionHref}
+          />
+        </Box>
+      ))}
     </Box>
   );
 };
