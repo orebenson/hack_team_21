@@ -11,6 +11,7 @@ const colors = {
   calmGreen: '#C7FFC6',
   highlightGreen: '#0BE248', // Accent
   charcoal: '#323233',
+  darkGrey: '#555555',
 };
 
 // Create the theme
@@ -28,6 +29,9 @@ const theme = createTheme({
     text: {
       primary: colors.black,
     },
+    disabled: {
+      main: colors.darkGrey,
+    }
   },
   typography: {
     fontFamily: 'GT Ultra, sans-serif',
