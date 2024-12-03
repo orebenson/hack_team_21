@@ -4,20 +4,16 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import theme from '../theme';
 
-const TextCard = () => {
+const TextCard = ({ heading, body }) => {
     /*const theme = useTheme();*/
     return (
       <ThemeProvider theme={theme}>
-        <Box sx={{ flexGrow: 1, textAlign: 'center', borderRadius: 4, backgroundColor: theme.palette.primary.main, mx: 'auto', p: 1}}>
+        <Box sx={{ flexGrow: 1, textAlign: 'center', borderRadius: 4, backgroundColor: theme.palette.secondary.main, mx: 'auto', p: 2, maxWidth: 300, mt: 2,}}>
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-            Benefits
+            {heading}
             </Typography>
             <Typography variant="body1" component="div">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Vivamus sit amet odio enim. Etiam egestas cursus nunc, a ultricies leo convallis eget.
-            Nullam suscipit nibh dapibus velit accumsan cursus. 
-            Phasellus a porta mauris. 
-            Sed tempor dapibus pharetra. Nullam a est odio
+              {body}
             </Typography>
         </Box>
       </ThemeProvider>
