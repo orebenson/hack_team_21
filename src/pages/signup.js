@@ -1,15 +1,44 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+import TextCard from '../components/textCard'; // Adjust the import path as necessary
+import SignUpButton from '../components/SignUpButton';
 import theme from '../theme';
-import '../fonts.css';
-import { Typography } from '@mui/material';
+import logo from '../assets/stable_rewards_logo.png';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
-const SignUp = () => {
+const signup = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>Sign Up</Typography>
+            <div>
+                <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', textAlign: 'center', mt: 2 }}>
+                    Join Stable Rewards today!
+                </Typography>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center', // Only horizontal alignment
+                        p: 2, // Optional padding around the content
+                    }}
+                >
+                    <img src={logo} alt="Logo" style={{ height: '200px' }} />
+                </Box>
+                <TextCard sx={{ p: 2 }}
+                    heading="Benefits"
+                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vivamus sit amet odio enim. Etiam egestas cursus nunc, a ultricies leo convallis eget."
+                />
+                <TextCard sx={{ p: 2 }}
+                    heading="Requirements"
+                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vivamus sit amet odio enim. Etiam egestas cursus nunc, a ultricies leo convallis eget."
+                />
+
+                <SignUpButton />
+            </div>
         </ThemeProvider>
     );
-}
+};
 
-export default SignUp
+export default signup;
+
