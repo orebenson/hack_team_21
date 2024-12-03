@@ -11,11 +11,15 @@ import { ThemeProvider, useTheme } from '@emotion/react';
 const NavBar = () => {
   const theme = useTheme();
 
+  const handleBackClick = () => {
+    window.history.back();
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static" style={{ backgroundColor: theme.palette.primary.main }}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="back">
+        <IconButton edge="start" color="inherit" aria-label="back" onClick={handleBackClick}>
             <ArrowBackIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1, textAlign: 'center' }}>

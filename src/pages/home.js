@@ -1,7 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import DonutChart from '../components/DonutChart';
-import RewardsCard from '../components/RewardsCard'; // Adjust the import path as necessary
+import RewardsCard from '../components/RewardsCard'; 
+import HomeGrid from '../components/HomeGrid'; 
 import theme from '../theme';
 
 const Home = () => {
@@ -19,7 +20,6 @@ const Home = () => {
         flexDirection: 'column', 
         alignItems: 'center', 
         minHeight: '100vh', 
-        padding: '20px',
         justifyContent: 'flex-start',
       }}>
         <DonutChart percentage={(saved / target) * 100} saved={saved} target={target} month={month} />
@@ -28,6 +28,7 @@ const Home = () => {
           pointsEarned={pointsEarned}
           totalPoints={totalPoints}
         />
+        <HomeGrid />
       </div>
     </ThemeProvider>
   );
