@@ -5,7 +5,7 @@ import { useTheme } from '@emotion/react';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = ({ percentage, text }) => {
+const DonutChart = ({ percentage, saved, target, month }) => {
   const theme = useTheme();
 
   const data = {
@@ -34,11 +34,16 @@ const DonutChart = ({ percentage, text }) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        fontSize: '20px',
+        fontSize: '12px', // Adjust the font size to fit within the chart
         fontWeight: 'bold',
         color: theme.palette.text.primary,
+        textAlign: 'center',
+        maxWidth: '100px', // Ensure the text doesn't overflow
+        wordWrap: 'break-word',
       }}>
-        {text}
+        {percentage === 100 && <div>Congrats!</div>}
+        <div>{`You've saved £${saved}/£${target}`}</div>
+        <div>in {month}</div>
       </div>
     </div>
   );
