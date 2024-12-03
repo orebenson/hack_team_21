@@ -19,17 +19,16 @@ import BorderedCard from '../components/BorderedCard';
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minHeight: '100vh', 
-              padding: '20px',
+              minHeight: '100vh',
               justifyContent: 'flex-start',
             }}>
                 <div>
                     <Container>
                         <Typography variant="h3" gutterBottom>
-                            Find Out More
+                            FAQs
                         </Typography>
                         <BorderedCard>
-                        <Box my={4}>
+                        <Box>
                             <Typography variant="h5" gutterBottom>
                                 What are stable rewards?
                             </Typography>
@@ -39,7 +38,7 @@ import BorderedCard from '../components/BorderedCard';
                         </Box>
                         </BorderedCard>
                         <BorderedCard>
-                        <Box my={4}>
+                        <Box>
                             <Typography variant="h5" gutterBottom>
                                 So how do I earn points?
                             </Typography>
@@ -49,7 +48,7 @@ import BorderedCard from '../components/BorderedCard';
                         </Box>
                         </BorderedCard>
                         <BorderedCard>
-                        <Box my={4}>
+                        <Box>
                             <Typography variant="h5" gutterBottom>
                                 Can I spend points whenever I like?
                             </Typography>
@@ -59,7 +58,7 @@ import BorderedCard from '../components/BorderedCard';
                         </Box>
                         </BorderedCard>
                         <BorderedCard>
-                        <Box my={4}>
+                        <Box>
                             <Typography variant="h5" gutterBottom>
                                 Can I still access my money?
                             </Typography>
