@@ -20,7 +20,7 @@ const TextCard = ({ heading, body }) => {
           mt: 2,
         }}
       >
-        <Typography variant="h6" component="div" sx={{ fontWeight: "bold" }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: "bold" , fontSize: 16}}>
           {heading}
         </Typography>
         <ul

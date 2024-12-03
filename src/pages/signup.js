@@ -10,13 +10,15 @@ import Typography from '@mui/material/Typography';
 const signup = () => {
 
     const benefits = [
-        'Claim vouchers and save money on your shopping',
-        'The more regular you save the higher the rewards you can get',
+        'Claim vouchers using points earned and save money on your shopping',
+        'Each month you save the larger the amount points you get that month',
+        'Multiplier of points increases each month you save consecutively'
+
       ];
 
       const requirements = [
         'Have a monthly savings account open',
-        'Put £50 -£250 each month to ensure the highest possible award',
+        'Deposit £50 to £250 each month to ensure the highest possible award',
       ];
 
     return (
