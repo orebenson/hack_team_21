@@ -9,7 +9,7 @@ function FindOutMore() {
     return (
         <ThemeProvider theme={theme}>
 
-            <h2 style={{ textAlign: 'center' }} >FAQs</h2>
+            <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>FAQs</Typography>
             <BorderedCard>
                 <Box>
                     <Typography variant="h5" gutterBottom>
