@@ -1,22 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import theme from './theme';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './fonts.css';
-import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import AvailableRewards from './pages/availableRewards';
 
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <NavBar />
-        <h1>Hello, Material UI!</h1>
-        <Button variant="contained" color="primary">
-          Click Me
-        </Button>
-      </div>
-    </ThemeProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/available-rewards" element={<AvailableRewards />} />
+      </Routes>
+    </Router>
   );
 }
 
