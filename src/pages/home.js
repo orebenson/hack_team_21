@@ -4,7 +4,6 @@ import DonutChart from '../components/DonutChart';
 import RewardsCard from '../components/RewardsCard'; 
 import HomeGrid from '../components/HomeGrid'; 
 import theme from '../theme';
-import coinsIcon from '../assets/coins_icon.png'; // Import the coins icon
 
 const Home = () => {
   const saved = 250;
@@ -21,7 +20,6 @@ const Home = () => {
         flexDirection: 'column', 
         alignItems: 'center', 
         minHeight: '100vh', 
-        padding: '20px',
         justifyContent: 'flex-start',
       }}>
         <DonutChart percentage={(saved / target) * 100} saved={saved} target={target} month={month} />
