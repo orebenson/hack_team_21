@@ -4,6 +4,8 @@ import './fonts.css';
 import theme from './theme';
 import Home from './pages/home';
 import AvailableRewards from './pages/availableRewards';
+import RewardsInformation from './pages/rewardsInformation';
+import RewardBarcode from './pages/rewardBarcode';
 import NavBar from './components/NavBar';
 import { ThemeProvider } from '@emotion/react';
 import { Box } from '@mui/material';
@@ -19,6 +21,9 @@ function App() {
             <Route path="/" element={<Home />} />
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/available-rewards" element={<AvailableRewards />} />
+            <Route path="/available-rewards/reward" element={<RewardsInformation />} />
+            <Route path="/available-rewards/reward/barcode" element={<RewardBarcode />} />
+
             {/* <Route path="/previous-rewards" element={<PreviousRewards />} />
             <Route path="/find-out-more" element={<FindOutMore />} />
             <Route path="/available-rewards/reward" element={<RewardInformation />} />
