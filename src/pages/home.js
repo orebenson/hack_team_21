@@ -9,8 +9,8 @@ const Home = () => {
   const target = 250;
   const month = 'December';
   const multiplier = 1.2;
-  const pointsEarned = 3000;
-  const totalPoints = 4500;
+  const pointsEarned = saved*10;
+  const totalPoints = pointsEarned*multiplier;
 
   return (
     <ThemeProvider theme={theme}>
