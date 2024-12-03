@@ -8,7 +8,7 @@ import telescopeIcon from '../assets/telescope_logo.png';
 
 const cardData = [
   { icon: coinsIcon, info: "Find available rewards to claim", action: "View Rewards", actionHref: "/available-rewards" },
-  { icon: pieChartIcon, info: "Check your claimed reward history", action: "Claimed Rewards", actionHref: "/previous-rewards" },
+  { icon: pieChartIcon, info: "Check your claimed reward history", action: "Claimed Rewards", actionHref: "/claimed-rewards" },
   { icon: progressIcon, info: "View your accumulated points", action: "Points Statement", actionHref: "/points-statement" },
   { icon: telescopeIcon, info: "", action: "Find Out More", actionHref: "/find-out-more" },
 ];
