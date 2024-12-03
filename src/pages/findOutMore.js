@@ -3,11 +3,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
 import '../fonts.css';
 import { Typography, Box } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import BorderedCard from '../components/BorderedCard';
 
 function FindOutMore() {
-    const navigate = useNavigate();
     return (
         <ThemeProvider theme={theme}>
 
