@@ -7,7 +7,7 @@ import logo from '../assets/stable_rewards_logo.png';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-const signup = () => {
+const SignUp = () => {
 
 
 
@@ -55,4 +55,4 @@ const signup = () => {
 };
 
 
-export default signup;
+export default SignUp;
