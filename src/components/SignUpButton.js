@@ -14,12 +14,11 @@ const SignUpButton = () => {
           textAlign: 'center',
           backgroundColor: theme.palette.background, // Background color from the theme
           mx: 'auto',
-          p: 2,
-          maxWidth: 300,
+          maxWidth: 350,
           mt: 4,
         }}
       >
-        <Button variant="contained" size="large" color="primary">
+        <Button variant ="contained" size="large" color="primary" sx={{ mx: 'auto', width: 350, height: 60, p:1 }}>
           <Typography variant="body1" component="div">
               Sign up now 
           </Typography>
