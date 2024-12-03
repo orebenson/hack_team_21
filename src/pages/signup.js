@@ -10,15 +10,13 @@ import Typography from '@mui/material/Typography';
 const signup = () => {
 
     const benefits = [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Vivamus sit amet odio enim.',
-        'Etiam egestas cursus nunc, a ultricies leo convallis eget.',
+        'Claim vouchers and save money on your shopping',
+        'The more regular you save the higher the rewards you can get',
       ];
 
       const requirements = [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Vivamus sit amet odio enim.',
-        'Etiam egestas cursus nunc, a ultricies leo convallis eget.',
+        'Have a monthly savings account open',
+        'Put £50 -£250 each month to ensure the highest possible award',
       ];
 
     return (
