@@ -26,19 +26,19 @@ const HomeGrid = () => {
         icon={pieChartIcon} 
         info="Check your claimed reward history" 
         action="Claimed Rewards" 
-        actionHref="https://example.com/card2"
+        actionHref="/previous-rewards"
       />
       <IconCard 
         icon={progressIcon} 
         info="View your accumulated points" 
         action="Points Statement" 
-        actionHref=""
+        actionHref="/points-statement"
       />
       <IconCard 
         icon={telescopeIcon} 
         info="" 
         action="Find Out More" 
-        actionHref="https://example.com/card4"
+        actionHref="/find-out-more"
       />
     </Box>
   );
