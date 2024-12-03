@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import theme from './theme';
 import './fonts.css';
 import NavBar from './components/NavBar';
+import Home from './pages/home';
 
 
 function App() {
@@ -11,10 +12,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div>
         <NavBar />
-        <h1>Hello, Material UI!</h1>
-        <Button variant="contained" color="primary">
-          Click Me
-        </Button>
+        <Home />
       </div>
     </ThemeProvider>
   );
