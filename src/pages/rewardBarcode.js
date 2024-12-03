@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import amazonLogo from '../assets/amazon_logo.webp';
 import barcode from '../assets/barcode.png';
 import theme from '../theme';
-import BorderedCard from '../components/BorderedCard'; 
 import { Button } from '@mui/material';
-import { grey } from '@mui/material/colors';
 
 
 const RewardBarcode = () => {
