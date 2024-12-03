@@ -26,20 +26,29 @@ const RewardsInformation = () => {
                 src={amazonLogo}
                 alt="A visual representation of rewards" 
                 className="rewards-image" 
-                style={{ width: '250px', height: 'auto', display: 'block', margin: '0 auto' }} 
+                style={{ width: '150px', height: 'auto', display: 'block', margin: '0 auto' }} 
             />
 
             <div className="rewards-description">
                 <BorderedCard>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-                        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <div className="reward-description">
+                        <h4>Reward Details</h4>
+                        <ul>
+                            <li><strong>Redemption Rate:</strong> 500 points = £5 voucher</li>
+                            <li>This reward is limited to one voucher per user per month.</li>
+                            <li>The voucher will expire in <strong>365 days</strong>.</li>
+                            <li>
+                                Redeem this voucher at selected stores, or apply it online by entering 
+                                the unique voucher code at checkout.
+                            </li>
+                        </ul>
+                        <h4>Additional Notes:</h4>
+                        <ul>
+                            <li>Ensure you use the voucher before it expires, as extensions are not permitted.</li>
+                            <li>Points deducted for this reward are non-refundable.</li>
+                        </ul>
+                        <p><strong>Terms and Conditions applies.</strong></p>
+                    </div>
                 </BorderedCard>
             </div>
 
