@@ -4,12 +4,12 @@ import theme from '../theme';
 import '../fonts.css';
 import { Typography } from '@mui/material';
 
-const SignUp = () => {
+const PreviousRewards = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>Sign Up</Typography>
+            <Typography style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>Previous Rewards</Typography>
         </ThemeProvider>
     );
 }
 
-export default SignUp
+export default PreviousRewards
