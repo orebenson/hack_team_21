@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AvailableRewards from './pages/availableRewards';
 import NavBar from './components/NavBar';
 import { ThemeProvider } from '@emotion/react';
+import PointsStatement from './pages/PointsStatement';
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
           {/* <Route path="/previous-rewards" element={<PreviousRewards />} />
           <Route path="/find-out-more" element={<FindOutMore />} />
           <Route path="/available-rewards/reward" element={<RewardInformation />} />
-          <Route path="/available-rewards/reward/barcode" element={<Barcode />} />
-          <Route path="/points-statement" element={<PointsStatement />} /> */}
+            <Route path="/available-rewards/reward/barcode" element={<Barcode />} />*/}
+          <Route path="/points-statement" element={<PointsStatement />} />
           
         </Routes>
       </Router>
