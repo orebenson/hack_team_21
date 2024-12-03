@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, useTheme } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import theme from '../theme';
