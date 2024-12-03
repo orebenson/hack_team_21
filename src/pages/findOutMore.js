@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
                 <div>
                     <NavBar />
                     <Container>
-                        <Typography variant="h1" gutterBottom>
+                        <Typography variant="h2" gutterBottom>
                             Find Out More
                         </Typography>
                         <Box my={4}>
