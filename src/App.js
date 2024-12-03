@@ -1,21 +1,36 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import theme from './theme';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './fonts.css';
+import theme from './theme';
+import Home from './pages/Home';
+import AvailableRewards from './pages/availableRewards';
 import NavBar from './components/NavBar';
+import { ThemeProvider } from '@emotion/react';
+import PointsStatement from './pages/PointsStatement';
+import { Box, Container } from '@mui/material';
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <NavBar />
-        <h1>Hello, Material UI!</h1>
-        <Button variant="contained" color="primary">
-          Click Me
-        </Button>
-      </div>
+      <NavBar />
+      <Container maxWidth="sm" style={{ marginTop: '15px', marginBottom: '20px' }}>
+        <Box style={{ marginLeft: '15px', marginRight: '20px' }}>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              {/* <Route path="/signup" element={<SignUp />} /> */}
+              <Route path="/available-rewards" element={<AvailableRewards />} />
+              {/* <Route path="/previous-rewards" element={<PreviousRewards />} />
+            <Route path="/find-out-more" element={<FindOutMore />} />
+            <Route path="/available-rewards/reward" element={<RewardInformation />} />
+            <Route path="/available-rewards/reward/barcode" element={<Barcode />} /> */}
+              <Route path="/points-statement" element={<PointsStatement />} />
+
+            </Routes>
+          </Router>
+        </Box>
+      </Container>
     </ThemeProvider>
   );
 }

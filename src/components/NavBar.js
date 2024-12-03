@@ -7,7 +7,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import logo from '../assets/stable_rewards_logo.png';
 import Box from '@mui/material/Box';
 import { ThemeProvider, useTheme } from '@emotion/react';
-// import theme from '../theme';
 
 const NavBar = () => {
   const theme = useTheme();
