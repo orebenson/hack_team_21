@@ -20,25 +20,27 @@ const DonutChart = ({ percentage, saved, target, month }) => {
   };
 
   const options = {
-    cutout: '80%', // Controls the thickness of the donut
+    cutout: '70%', // Controls the thickness of the donut
     plugins: {
       tooltip: { enabled: false },
     },
+    maintainAspectRatio: false,
+    responsive: true,
   };
 
   return (
-    <div style={{ position: 'relative', width: '150px', height: '150px' }}>
+    <div style={{ position: 'relative', width: '70%', aspectRatio: '1', margin: '20px 0' }}>
       <Doughnut data={data} options={options} />
       <div style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        fontSize: '12px', // Adjust the font size to fit within the chart
+        fontSize: 'calc(10px + 1vw)', // Responsive font size
         fontWeight: 'bold',
         color: theme.palette.text.primary,
         textAlign: 'center',
-        maxWidth: '100px', // Ensure the text doesn't overflow
+        maxWidth: '80%', // Ensure the text doesn't overflow
         wordWrap: 'break-word',
       }}>
         {percentage === 100 && <div>Congrats!</div>}
