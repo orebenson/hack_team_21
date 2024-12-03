@@ -5,7 +5,7 @@ import { ThemeProvider } from '@emotion/react';
 import './fonts.css';
 import theme from './theme';
 import NavBar from './components/NavBar';
-import Home from './pages/home';
+import Home from './pages/Home';
 import AvailableRewards from './pages/availableRewards';
 import SignUp from './pages/signup';
 import FindOutMore from './pages/findOutMore';
