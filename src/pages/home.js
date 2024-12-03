@@ -1,8 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import DonutChart from '../components/DonutChart';
-import RewardsCard from '../components/RewardsCard'; // Adjust the import path as necessary
+import RewardsCard from '../components/RewardsCard'; 
+import HomeGrid from '../components/HomeGrid'; 
 import theme from '../theme';
+import coinsIcon from '../assets/coins_icon.png'; // Import the coins icon
 
 const Home = () => {
   const saved = 250;
@@ -28,6 +30,7 @@ const Home = () => {
           pointsEarned={pointsEarned}
           totalPoints={totalPoints}
         />
+        <HomeGrid />
       </div>
     </ThemeProvider>
   );
