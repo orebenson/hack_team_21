@@ -12,11 +12,12 @@ const PointsStatement = () => {
         { date: '2024-12-05', voucher: 'Voucher A', cost: 100 },
         { date: '2024-12-10', voucher: 'Voucher B', cost: 50 },
         { date: '2024-12-15', voucher: 'Voucher C', cost: 75 },
+        { date: '2024-12-15', voucher: 'Voucher C', cost: 1275 },
     ];
 
     const pointsEarned = [
         { month: 'November', points: 400 },
-        { month: 'December', points: 300 },
+        { month: 'December', points: 2500 },
         { month: 'October', points: 300 },
     ];
 
