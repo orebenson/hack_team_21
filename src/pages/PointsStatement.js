@@ -17,15 +17,18 @@ const PointsStatement = () => {
     const pointsEarned = [
         { month: 'November', points: 400 },
         { month: 'December', points: 300 },
+        { month: 'October', points: 300 },
     ];
+
+    pointsEarned.sort((a, b) => new Date(b.month + ' 01, 2024') - new Date(a.month + ' 01, 2024'));
 
     const calculateBalance = (month) => {
         const points = pointsEarned.find(p => p.month === month)?.points || 0;
-        const expensesTotal = expenses.reduce((acc, expense) => acc + expense.cost, 0);
+        const expensesTotal = expenses
+            .filter(expense => new Date(expense.date).getMonth() === new Date(`${month} 01, 2024`).getMonth())
+            .reduce((acc, expense) => acc + expense.cost, 0);
         return startingBalance + points - expensesTotal;
     };
-
-    const months = pointsEarned.map(p => p.month);
 
     return (
         <ThemeProvider theme={theme}>
@@ -34,9 +37,14 @@ const PointsStatement = () => {
                     Points Statement
                 </Typography>
 
-                {months.map((month, index) => {
-                    const pointsThisMonth = pointsEarned.find(p => p.month === month).points;
-                    const balanceAtStartOfMonth = startingBalance
+                {pointsEarned.map((entry, index) => {
+                    const month = entry.month;
+                    const pointsThisMonth = entry.points;
+                    const expensesThisMonth = expenses
+                        .filter(expense => new Date(expense.date).getMonth() === new Date(`${month} 01, 2024`).getMonth())
+                        .reduce((acc, expense) => acc + expense.cost, 0);
+
+                    const balanceAtStartOfMonth = startingBalance;
                     const balanceAtEndOfMonth = calculateBalance(month);
 
                     return (
@@ -49,7 +57,7 @@ const PointsStatement = () => {
 
                             <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                                 <Typography variant="body1" style={{ fontSize: '16px' }}>
-                                    Points balance at beginning of the month: {balanceAtStartOfMonth}
+                                    Balance at the start of this month: {balanceAtStartOfMonth}
                                 </Typography>
                             </Box>
 
@@ -59,22 +67,15 @@ const PointsStatement = () => {
                                 </Typography>
                             </Box>
 
-                            <Box mb={2}>
-                                <Typography variant="body1" style={{ fontSize: '16px', fontWeight: 'bold' }}>
-                                    Expenses this month:
+                            <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
+                                <Typography variant="body1" style={{ fontSize: '16px' }}>
+                                    Points spent this month: {expensesThisMonth}
                                 </Typography>
-                                {expenses.map((expense, index) => (
-                                    <Box display="flex" justifyContent="space-between" alignItems="center" mb={1} key={index}>
-                                        <Typography variant="body1" style={{ fontSize: '14px' }}>
-                                            {expense.date} - {expense.voucher} - {expense.cost}
-                                        </Typography>
-                                    </Box>
-                                ))}
                             </Box>
 
                             <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                                 <Typography variant="body1" style={{ fontSize: '16px' }}>
-                                    Points balance at end of the month: {balanceAtEndOfMonth}
+                                    Balance at the end of this month: {balanceAtEndOfMonth}
                                 </Typography>
                             </Box>
                         </BorderedCard>
