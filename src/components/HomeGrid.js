@@ -26,7 +26,7 @@ const HomeGrid = () => {
         icon={pieChartIcon} 
         info="Check your claimed reward history" 
         action="Claimed Rewards" 
-        actionHref="/previous-rewards"
+        actionHref="/claimed-rewards"
       />
       <IconCard 
         icon={progressIcon} 

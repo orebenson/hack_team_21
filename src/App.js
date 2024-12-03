@@ -11,8 +11,8 @@ import SignUp from './pages/signup';
 import FindOutMore from './pages/findOutMore';
 import RewardsInformation from './pages/rewardsInformation';
 import RewardBarcode from './pages/rewardBarcode';
-import PreviousRewards from './pages/PreviousRewards';
 import PointsStatement from './pages/PointsStatement';
+import ClaimedRewards from './pages/claimedRewards';
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
               <Route path="/find-out-more" element={<FindOutMore />} />
               <Route path="/available-rewards/reward" element={<RewardsInformation />} />
               <Route path="/available-rewards/reward/barcode" element={<RewardBarcode />} />
-              <Route path="/previous-rewards" element={<PreviousRewards />} />
+              <Route path="/claimed-rewards" element={<ClaimedRewards />} />
               <Route path="/points-statement" element={<PointsStatement />} />
 
             </Routes>
